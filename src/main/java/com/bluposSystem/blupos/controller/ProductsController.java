@@ -1,7 +1,7 @@
 package com.bluposSystem.blupos.controller;
 
 import com.bluposSystem.blupos.model.Products;
-import com.bluposSystem.blupos.service.ProductsService;
+import com.bluposSystem.blupos.repository.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,24 +9,24 @@ import org.springframework.web.bind.annotation.*;
 public class ProductsController {
 
     @Autowired
-    ProductsService prodService;//Dependency Injection
+    ProductsRepository prodService;//Dependency Injection
 
-    @PostMapping("/addProd")
+    @PostMapping("/addProduct")
     Products create(@RequestBody Products prod) {
         return prodService.save(prod);
     }
 
-    @GetMapping("/listProd")
+    @GetMapping("/listProduct")
     Iterable<Products> read() {
         return prodService.findAll();
     }
 
-    @PutMapping("/updProd")
+    @PutMapping("/updProduct")
     Products update(@RequestBody Products prod){
         return prodService.save(prod);
     }
 
-    @DeleteMapping("/delProd/{id}")
+    @DeleteMapping("/delProduct/{id}")
     void delete(@PathVariable Integer id) {
         prodService.deleteById(id);
     }

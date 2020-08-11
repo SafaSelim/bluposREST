@@ -1,7 +1,7 @@
 package com.bluposSystem.blupos.controller;
 
 import com.bluposSystem.blupos.model.Users;
-import com.bluposSystem.blupos.service.UserService;
+import com.bluposSystem.blupos.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     @Autowired
-    UserService userService;//Dependency Injection
+    UserRepository userRepository;//Dependency Injection
 
     @PostMapping("/addUser")
     Users create(@RequestBody Users users) {
-        return userService.save(users);
+        return userRepository.save(users);
     }
 
     @GetMapping("/listUser")
     Iterable<Users> read() {
-        return userService.findAll();
+        return userRepository.findAll();
     }
 
     @PutMapping("/updUser")
     Users update(@RequestBody Users users){
-        return userService.save(users);
+        return userRepository.save(users);
     }
 
     @DeleteMapping("/delUser/{id}")
     void delete(@PathVariable Integer id) {
-        userService.deleteById(id);
+        userRepository.deleteById(id);
     }
 }

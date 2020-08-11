@@ -1,7 +1,7 @@
 package com.bluposSystem.blupos.controller;
 
 import com.bluposSystem.blupos.model.Customers;
-import com.bluposSystem.blupos.service.CustomersService;
+import com.bluposSystem.blupos.repository.CustomersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class CustomersController {
 
     @Autowired
-    CustomersService custService;//Dependency Injection
+    CustomersRepository custService;//Dependency Injection
 
     @PostMapping("/addCust")
     Customers create(@RequestBody Customers cust) {

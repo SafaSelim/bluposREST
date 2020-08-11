@@ -2,14 +2,14 @@ package com.bluposSystem.blupos.controller;
 
 
 import com.bluposSystem.blupos.model.ProductCategory;
-import com.bluposSystem.blupos.service.ProductCategoryService;
+import com.bluposSystem.blupos.repository.ProductCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ProductCategoryController {
     @Autowired
-    ProductCategoryService prodCatService;//Dependency Injection
+    ProductCategoryRepository prodCatService;//Dependency Injection
 
     @PostMapping("/addProdCat")
     ProductCategory create(@RequestBody ProductCategory prodCat) {

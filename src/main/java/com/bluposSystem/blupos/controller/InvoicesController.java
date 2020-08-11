@@ -1,7 +1,7 @@
 package com.bluposSystem.blupos.controller;
 
 import com.bluposSystem.blupos.model.Invoices;
-import com.bluposSystem.blupos.service.InvoicesService;
+import com.bluposSystem.blupos.repository.InvoicesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public class InvoicesController {
 
     @Autowired
-    InvoicesService invService;//Dependency Injection
+    InvoicesRepository invService;//Dependency Injection
 
     @PostMapping("/addInv")
     Invoices create(@RequestBody Invoices inv) {

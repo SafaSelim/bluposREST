@@ -2,7 +2,7 @@ package com.bluposSystem.blupos.controller;
 
 
 import com.bluposSystem.blupos.model.ProductUnit;
-import com.bluposSystem.blupos.service.ProductUnitService;
+import com.bluposSystem.blupos.repository.ProductUnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProductUnitController {
     @Autowired
-    ProductUnitService prodUnitService;//Dependency Injection
+    ProductUnitRepository prodUnitService;//Dependency Injection
 
     @PostMapping("/addProdUnit")
     ProductUnit create(@RequestBody ProductUnit prodUnit) {

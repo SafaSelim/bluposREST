@@ -9,23 +9,25 @@ import javax.persistence.Id;
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int productId;
+    private int prodId;
 
-    private String productCode;
-    private String productName;
-    private int productCatId;
+    private String prodCode;
+    private String prodName;
+    private int prodCatId;
     private int uom;
     private float price;
-    private int stock;
+    private int unitInStock;
+    private String imgPath;
 
     public Products(Products prod) {
-        this.productId = prod.productId;
-        this.productCode = prod.productCode;
-        this.productName = prod.productName;
-        this.productCatId = prod.productCatId;
+        this.prodId = prod.prodId;
+        this.prodCode = prod.prodCode;
+        this.prodName = prod.prodName;
+        this.prodCatId = prod.prodCatId;
         this.uom = prod.uom;
         this.price = prod.price;
-        this.stock = prod.stock;
+        this.unitInStock = prod.unitInStock;
+        this.imgPath = prod.imgPath;
     }
 
     public Products() {
@@ -33,35 +35,35 @@ public class Products {
     }
 
     public int getProductId() {
-        return productId;
+        return prodId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProductId(int prodId) {
+        this.prodId = prodId;
     }
 
     public String getProductCode() {
-        return productCode;
+        return prodCode;
     }
 
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
+    public void setProductCode(String prodCode) {
+        this.prodCode = prodCode;
     }
 
     public String getProductName() {
-        return productName;
+        return prodName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String prodName) {
+        this.prodName = prodName;
     }
 
     public int getProductCatId() {
-        return productCatId;
+        return prodCatId;
     }
 
-    public void setProductCatId(int productCatId) {
-        this.productCatId = productCatId;
+    public void setProductCatId(int prodCatId) {
+        this.prodCatId = prodCatId;
     }
 
     public int getUom() {
@@ -81,10 +83,18 @@ public class Products {
     }
 
     public int getStock() {
-        return stock;
+        return unitInStock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setStock(int unitInStock) {
+        this.unitInStock = unitInStock;
+    }
+
+    public String getImg_path() {
+        return imgPath;
+    }
+
+    public void setImg_path(String imgPath) {
+        this.imgPath = imgPath;
     }
 }

@@ -46,35 +46,35 @@ public class Products {
 
     }
 
-    public int getProductId() {
+    public int getProdId() {
         return prodId;
     }
 
-    public void setProductId(int prodId) {
+    public void setProdId(int prodId) {
         this.prodId = prodId;
     }
 
-    public String getProductCode() {
+    public String getProdCode() {
         return prodCode;
     }
 
-    public void setProductCode(String prodCode) {
+    public void setProdCode(String prodCode) {
         this.prodCode = prodCode;
     }
 
-    public String getProductName() {
+    public String getProdName() {
         return prodName;
     }
 
-    public void setProductName(String prodName) {
+    public void setProdName(String prodName) {
         this.prodName = prodName;
     }
 
-    public int getProductCatId() {
+    public int getProdCatId() {
         return prodCatId;
     }
 
-    public void setProductCatId(int prodCatId) {
+    public void setProdCatId(int prodCatId) {
         this.prodCatId = prodCatId;
     }
 
@@ -94,19 +94,19 @@ public class Products {
         this.price = price;
     }
 
-    public int getStock() {
+    public int getUnitInStock() {
         return unitInStock;
     }
 
-    public void setStock(int unitInStock) {
+    public void setUnitInStock(int unitInStock) {
         this.unitInStock = unitInStock;
     }
 
-    public String getImg_path() {
+    public String getImgPath() {
         return imgPath;
     }
 
-    public void setImg_path(String imgPath) {
+    public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
     }
 }

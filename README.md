@@ -1,4 +1,4 @@
 # REST Service for BluPOS app.
 
-On terminal run:
-  mvnw spring-boot:run
+To start the application run the command below:
+  > mvnw spring-boot:run

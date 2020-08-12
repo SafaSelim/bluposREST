@@ -1,16 +1,16 @@
-package com.bluposSystem.blupos.model;
+package com.bluposSystem.blupos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="product_unit")
 public class ProductUnit {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="UNIT_ID")
     private int unitId;
 
+    @Column(name="UNIT_NAME")
     private String unitName;
 
     public ProductUnit(ProductUnit prodUnit) {

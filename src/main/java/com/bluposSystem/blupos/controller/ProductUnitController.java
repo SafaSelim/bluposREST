@@ -1,13 +1,14 @@
 package com.bluposSystem.blupos.controller;
 
 
-import com.bluposSystem.blupos.model.ProductUnit;
+import com.bluposSystem.blupos.entities.ProductUnit;
 import com.bluposSystem.blupos.repository.ProductUnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class ProductUnitController {
     @Autowired
     ProductUnitRepository prodUnitService;//Dependency Injection

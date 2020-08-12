@@ -1,19 +1,28 @@
-package com.bluposSystem.blupos.model;
+package com.bluposSystem.blupos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="invoices")
 public class Invoices {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "INVOICE_ID")
     private int invoiceId;
+
+    @Column(name = "CUSTOMER_ID")
     private int customerId;
+
+    @Column(name = "REG_USER")
     private int regUser;
+
+    @Column(name = "PAYMENT_TYPE")
     private int paymentType;
+
+    @Column(name = "TOTAL_AMOUNT")
     private float totalAmount;
+
+    @Column(name = "DATE")
     private String date;
 
     public Invoices(Invoices invoices) {

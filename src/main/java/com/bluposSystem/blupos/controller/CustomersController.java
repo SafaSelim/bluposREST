@@ -1,11 +1,12 @@
 package com.bluposSystem.blupos.controller;
 
-import com.bluposSystem.blupos.model.Customers;
+import com.bluposSystem.blupos.entities.Customers;
 import com.bluposSystem.blupos.repository.CustomersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class CustomersController {
 
     @Autowired

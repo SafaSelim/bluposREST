@@ -1,11 +1,12 @@
 package com.bluposSystem.blupos.controller;
 
-import com.bluposSystem.blupos.model.Invoices;
+import com.bluposSystem.blupos.entities.Invoices;
 import com.bluposSystem.blupos.repository.InvoicesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api")
 public class InvoicesController {
 
     @Autowired

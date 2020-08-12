@@ -1,21 +1,29 @@
-package com.bluposSystem.blupos.model;
+package com.bluposSystem.blupos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="users")
 public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="USER_ID")
     private int userId;
 
+    @Column(name="USER_NAME")
     private String userName;
+
+    @Column(name="FIRST_NAME")
     private String firstName;
+
+    @Column(name="LAST_NAME")
     private String lastName;
+
+    @Column(name="PASSWORD")
     private String password;
+
+    @Column(name="EMAIL")
     private String email;
 
     public Users(Users users) {

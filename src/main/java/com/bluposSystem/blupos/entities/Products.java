@@ -1,22 +1,34 @@
-package com.bluposSystem.blupos.model;
+package com.bluposSystem.blupos.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="products")
 public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="PROD_ID")
     private int prodId;
 
+    @Column(name="PROD_CODE")
     private String prodCode;
+
+    @Column(name="PROD_NAME")
     private String prodName;
+
+    @Column(name="PROD_CAT_ID")
     private int prodCatId;
+
+    @Column(name="UOM")
     private int uom;
+
+    @Column(name="PRICE")
     private float price;
+
+    @Column(name="UNIT_IN_STOCK")
     private int unitInStock;
+
+    @Column(name="IMG_PATH")
     private String imgPath;
 
     public Products(Products prod) {
